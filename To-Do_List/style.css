@@ -1,0 +1,85 @@
+/*REGISTRAR NUEVAS TAREAS*/
+
+.contenedor-nueva-tarea{
+    border: solid 1px #ccc;
+    border-radius: 5px;
+
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+
+    background-color: #f1c1c1;
+    font-family: 'Courier New', Courier, monospace;
+
+    width: 50%;
+    margin: 0 auto;
+}
+.nueva-tarea{
+    display: flex;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    background: #f16ffd;
+    width: 37%;
+    padding: 5px;
+    margin: 10px;
+}
+.input-nueva-tarea{
+    width: 100%;
+    height: 30px;
+    margin: 10px;
+    border: 2px;
+    border-radius: 10px;
+}
+.boton-nueva-tarea{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    background: #6ffdce;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton-nueva-tarea:hover{
+    background: #f1c1c1;
+}
+
+/*LISTA DE TAREAS*/
+
+.contenedor-lista-tareas{
+    border: solid 1px #ccc;
+    border-radius: 5px;
+
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+
+    background: #6ffdce;
+    font-family: 'Courier New', Courier, monospace;
+
+    width: 50%;
+    margin: 0 auto;
+}
+.lista-tareas{
+    display: flex;
+
+    border: solid 1px #f16ffd;
+    border-radius: 5px;
+    background: #f1c1c1;
+
+    padding: 10px;
+}
+.tarea {
+    margin: 5px;
+}
+.boton-eliminar{
+    width: 70px;
+    background: #f16ffd;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.boton-eliminar:hover{
+    background: #6ffdce;
+}

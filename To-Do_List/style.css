@@ -19,16 +19,16 @@
     border: solid 1px #ccc;
     border-radius: 5px;
     background: #f16ffd;
-    width: 37%;
+    width: 40%;
     padding: 5px;
     margin: 10px;
 }
 .input-nueva-tarea{
-    width: 100%;
+    width: 20vh;
     height: 30px;
     margin: 10px;
     border: 2px;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 .boton-nueva-tarea{
     display: flex;
@@ -62,14 +62,15 @@
     width: 50%;
     margin: 0 auto;
 }
-.lista-tareas{
-    display: flex;
-
+.n-tarea{
     border: solid 1px #f16ffd;
-    border-radius: 5px;
     background: #f1c1c1;
-
+    border-radius: 5px;
+    list-style: none;
     padding: 10px;
+    
+    display: flex;
+    margin: 5px;
 }
 .tarea {
     margin: 5px;

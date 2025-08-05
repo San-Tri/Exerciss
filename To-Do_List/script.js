@@ -72,7 +72,18 @@ function agregarTarea(tarea) {
     );
 
     //funcion para guardar nueva tarea al localStorage
-    function guardarTarea()
+    function guardarTarea(tarea) {
+        let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
+        tareas.push(tarea);
+        localStorage.setItem("tareas",JSON.stringify(tareas));
+    }
+
+    //funcion para eliminar una tarea del localStorage
+    function eliminarTarea(tarea) {
+        let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
+        tareas = tareas.filter(t => t !== tarea);
+        localStorage.setItem("tareas", JSON.stringify(tareas));
+    }
 
 }
 

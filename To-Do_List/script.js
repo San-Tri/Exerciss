@@ -1,6 +1,6 @@
 // Función para cargar tareas desde localStorage al iniciar la página
 window.addEventListener("DOMContentLoaded", function () {
-    let tareasGuardadas = JSON.parse(localStorage.getItem("tareas")) || [];
+    let tareasGuardadas = JSON.parse(localStorage.getItem("tareas")) || []; // JSON.parse convierte el texto plano guardado (string) de vuelta a un Array de JS
 
     tareasGuardadas.forEach(function (texto) {
         agregarTarea(texto);
@@ -16,6 +16,8 @@ document.querySelector(".boton-nueva-tarea").addEventListener("click", function 
     } else {
         agregarTarea(tarea);
         guardarTarea(tarea);
+
+        //limpiamos la entrada del input
         document.querySelector(".input-nueva-tarea").value = "";
     }
 });
@@ -51,20 +53,20 @@ function agregarTarea(tarea) {
 
     //Acción para poner la lista en el <ul> 
     document.querySelector(".lista-tareas").appendChild(nuevaTarea);
-}
+};
 
 // Función para guardar una nueva tarea en localStorage
 function guardarTarea(tarea) {
     let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
     tareas.push(tarea);
-    localStorage.setItem("tareas", JSON.stringify(tareas));
-}
+    localStorage.setItem("tareas", JSON.stringify(tareas)); // el JSON.stringify convirte el array (tareas) en texto plano (string)
+};
 
 // Función para eliminar una tarea del localStorage
 function eliminarTarea(tarea) {
     let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
     tareas = tareas.filter(t => t !== tarea);
     localStorage.setItem("tareas", JSON.stringify(tareas));
-}
+};
 
 
